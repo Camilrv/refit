@@ -5,6 +5,9 @@
     <TargetFrameworks>netstandard1.4;net461;netstandard2.0</TargetFrameworks>
     <GenerateDocumentationFile Condition=" '$(Configuration)' == 'Release' ">true</GenerateDocumentationFile>
     <DebugType>embedded</DebugType>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Refit.snk</AssemblyOriginatorKeyFile>
+    <AssemblyName>Refit.Signed</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup Label="Package">
+    <None Include="..\Refit.snk" Link="Refit.snk" />
     <None Include="targets\refit.targets" PackagePath="build\net461" Pack="true" />
     <None Include="targets\refit.targets" PackagePath="build\netstandard1.4" Pack="true" />
     <None Include="..\InterfaceStubGenerator.BuildTasks\bin\$(Configuration)\net46\publish\**\*.*" LinkBase="build\MSBuildFull46" PackagePath="build\MSBuildFull46" Pack="true" />

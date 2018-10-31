@@ -5,6 +5,9 @@
     <Description>Refit HTTP Client Factory Extensions</Description>
     <TargetFramework>netstandard2.0</TargetFramework>
     <DebugType>embedded</DebugType>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Refit.snk</AssemblyOriginatorKeyFile>
+    <AssemblyName>Refit.HttpClientFactory.Signed</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
